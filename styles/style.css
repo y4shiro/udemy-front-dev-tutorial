@@ -610,8 +610,14 @@ img {
   color: #535353;
 }
 
+.flex, .houses__inner {
+  display: flex;
+  flex-direction: column;
+}
+
 .houses__btn {
   text-align: center;
+  flex-basis: 100%;
 }
 
 @media (min-width: 480x) {
@@ -628,6 +634,14 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+  .flex, .houses__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .houses__item {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 960px) {

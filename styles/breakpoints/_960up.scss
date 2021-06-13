@@ -29,3 +29,17 @@ Stylesheet: 960px以上のモニタで適用
 .pb-lg {
   padding-bottom: 150px !important;
 }
+
+.popular {
+  &__container {
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex-basis: 25%;
+  }
+
+  &__img {
+    height: 335px;
+  }
+}

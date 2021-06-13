@@ -10,4 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   const so = new ScrollObserver('.tween-animate-title', cb);
+
+  const _inviewAnimation = (el, inview) => {
+    if (inview) {
+      el.classList.add('inview');
+    } else {
+      el.classList.remove('inview');
+    }
+  };
+
+  const so2 = new ScrollObserver('.cover-slide', _inviewAnimation);
 });

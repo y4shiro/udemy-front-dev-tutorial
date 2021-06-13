@@ -16,7 +16,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -38,6 +38,8 @@
 }
 
 .hero {
+  overflow: hidden;
+
   &__title {
     position: absolute;
     top: 50%;

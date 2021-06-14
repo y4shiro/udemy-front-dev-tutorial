@@ -627,6 +627,28 @@ img {
   z-index: 0;
 }
 
+.travel__title {
+  position: relative;
+}
+
+.travel__title::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  width: 100px;
+  height: 1px;
+  background-color: black;
+  transform: translateY(-50%) scaleX(0);
+  transition: transform 0.3s ease 1.6s;
+  transform-origin: right;
+}
+
+.travel__title.inview::before {
+  transform: translateY(-50%);
+}
+
 .travel__img {
   height: 300px;
   transition: box-shadow 1ms linear 0.8s;
@@ -763,6 +785,9 @@ Stylesheet: 960px以上のモニタで適用
   }
   .travel__description {
     margin-bottom: 40px;
+  }
+  .travel__title::before {
+    display: block;
   }
 }
 

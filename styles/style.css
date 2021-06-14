@@ -579,7 +579,7 @@ img {
   font-size: 25px;
 }
 
-.mb-sm, .houses__title, .popular__title {
+.mb-sm, .travel__sub, .travel__img, .houses__title, .popular__title {
   margin-bottom: 16px !important;
 }
 
@@ -587,7 +587,7 @@ img {
   margin-bottom: 80px !important;
 }
 
-.pb-sm, .popular__container {
+.pb-sm, .travel__texts, .popular__container {
   padding-bottom: 16px !important;
 }
 
@@ -595,7 +595,7 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width, .houses, .popular__header, .popular__container {
+.content-width, .travel, .houses, .popular__header, .popular__container {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -610,9 +610,29 @@ img {
   color: #535353;
 }
 
-.flex, .houses__inner, .popular__container {
+.flex, .travel__inner, .houses__inner, .popular__container {
   display: flex;
   flex-direction: column;
+}
+
+.purple {
+  color: #904669;
+}
+
+.travel__inner {
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eaebe6;
+}
+
+.travel__img {
+  height: 300px;
+}
+
+.travel__img > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .houses__btn {
@@ -670,7 +690,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .houses__inner, .popular__container {
+  .flex, .travel__inner, .houses__inner, .popular__container {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -683,6 +703,16 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   }
   .popular__item {
     flex-basis: 47%;
+  }
+  .travel__inner {
+    padding: 50px;
+  }
+  .travel__texts, .travel__img {
+    flex-basis: 47%;
+  }
+  .travel__texts {
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -719,6 +749,12 @@ Stylesheet: 960px以上のモニタで適用
   .popular__img {
     height: 335px;
   }
+  .travel__img {
+    height: 400px;
+  }
+  .travel__description {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -727,6 +763,9 @@ Stylesheet: 960px以上のモニタで適用
 Stylesheet: 1280px以上のモニタで適用
 
 ******************************************************************/
+  .travel__inner {
+    padding: 50px 150px;
+  }
   .popular__item {
     flex-basis: 23%;
   }

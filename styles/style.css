@@ -595,7 +595,7 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width, .travel, .houses, .popular__header, .popular__container {
+.content-width, .travel, .houses, .popular__header, .popular__container, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -610,7 +610,7 @@ img {
   color: #535353;
 }
 
-.flex, .travel__inner, .houses__inner, .popular__container {
+.flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: flex;
   flex-direction: column;
 }
@@ -707,6 +707,49 @@ img {
   width: 100%;
 }
 
+.logo {
+  font-size: 42px;
+  display: flex;
+}
+
+.logo__img {
+  width: 0.7em;
+}
+
+.logo__world {
+  color: #904669;
+}
+
+.footer {
+  padding: 60px 0;
+}
+
+.footer__nav {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__li {
+  padding: 0;
+  margin: 10px;
+}
+
+.footer__li > a {
+  color: #535353;
+}
+
+.footer .logo {
+  font-size: 38px;
+  justify-content: center;
+}
+
 @media (min-width: 480x) {
   /******************************************************************
 
@@ -721,7 +764,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .travel__inner, .houses__inner, .popular__container {
+  .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -744,6 +787,13 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   .travel__texts {
     display: flex;
     align-items: flex-end;
+  }
+  .footer .logo {
+    justify-content: flex-start;
+  }
+  .footer__li {
+    margin-left: 0;
+    margin-right: 30px;
   }
 }
 

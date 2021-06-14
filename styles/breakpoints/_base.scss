@@ -79,6 +79,8 @@ img {
     justify-content: space-between;
     padding: 15px;
     background-color: $cBgGray;
+    position: relative;
+    z-index: 0;
   }
 
   &__sub {
@@ -88,11 +90,18 @@ img {
   &__img {
     height: 300px;
     @extend .mb-sm;
+    transition: box-shadow 1ms linear 0.8s;
 
     & > img {
+      position: relative;
+      z-index: -1;
       object-fit: cover;
       width: 100%;
       height: 100%;
+    }
+
+    &.inview {
+      box-shadow: inset 0 0 30px $cBlack;
     }
   }
 

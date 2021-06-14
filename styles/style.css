@@ -623,16 +623,25 @@ img {
   justify-content: space-between;
   padding: 15px;
   background-color: #eaebe6;
+  position: relative;
+  z-index: 0;
 }
 
 .travel__img {
   height: 300px;
+  transition: box-shadow 1ms linear 0.8s;
 }
 
 .travel__img > img {
+  position: relative;
+  z-index: -1;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.travel__img.inview {
+  box-shadow: inset 0 0 30px black;
 }
 
 .houses__btn {

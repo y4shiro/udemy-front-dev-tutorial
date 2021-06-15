@@ -556,6 +556,11 @@
   width: 300px;
 }
 
+.mobile-menu .logo {
+  padding: 0 40px;
+  font-size: 38px;
+}
+
 .mobile-menu__btn {
   background-color: unset;
   border: none;
@@ -587,6 +592,7 @@
   visibility: hidden;
   transition: opacity 1s;
   cursor: pointer;
+  z-index: 200;
 }
 
 .mobile-menu__main {
@@ -608,7 +614,7 @@
   display: block;
   margin-top: 30px;
   color: black;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .menu-open #container {
@@ -720,6 +726,7 @@ img {
 .main-title {
   font-weight: 600;
   margin-bottom: 0;
+  display: block;
 }
 
 .sub-title {
@@ -739,6 +746,13 @@ img {
   padding-top: 100px;
 }
 
+#container {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -749,6 +763,11 @@ img {
   display: flex;
   align-items: center;
   z-index: 100;
+}
+
+.header.triggerd {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
 }
 
 .header__nav {
